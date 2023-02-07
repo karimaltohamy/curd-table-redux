@@ -76,36 +76,44 @@ const Home = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {users.map((user) => (
-              <StyledTableRow key={user.id}>
-                <StyledTableCell component="th" scope="row">
-                  {user.name}
-                </StyledTableCell>
-                <StyledTableCell align="center">{user.email}</StyledTableCell>
-                <StyledTableCell align="center">{user.contact}</StyledTableCell>
-                <StyledTableCell align="center">{user.address}</StyledTableCell>
-                <StyledTableCell align="center">
-                  <ButtonGroup
-                    variant="contained"
-                    aria-label="outlined button group"
-                  >
-                    <Button
-                      color="primary"
-                      style={{ marginRight: "5px" }}
-                      onClick={() => handleEditUser(user.id)}
-                    >
-                      Edit
-                    </Button>
-                    <Button
-                      color="error"
-                      onClick={() => handleDeleteUser(user.id)}
-                    >
-                      Remove
-                    </Button>
-                  </ButtonGroup>
-                </StyledTableCell>
-              </StyledTableRow>
-            ))}
+            {users.length > 0
+              ? users.map((user) => (
+                  <StyledTableRow key={user.id}>
+                    <StyledTableCell component="th" scope="row">
+                      {user.name}
+                    </StyledTableCell>
+                    <StyledTableCell align="center">
+                      {user.email}
+                    </StyledTableCell>
+                    <StyledTableCell align="center">
+                      {user.contact}
+                    </StyledTableCell>
+                    <StyledTableCell align="center">
+                      {user.address}
+                    </StyledTableCell>
+                    <StyledTableCell align="center">
+                      <ButtonGroup
+                        variant="contained"
+                        aria-label="outlined button group"
+                      >
+                        <Button
+                          color="primary"
+                          style={{ marginRight: "5px" }}
+                          onClick={() => handleEditUser(user.id)}
+                        >
+                          Edit
+                        </Button>
+                        <Button
+                          color="error"
+                          onClick={() => handleDeleteUser(user.id)}
+                        >
+                          Remove
+                        </Button>
+                      </ButtonGroup>
+                    </StyledTableCell>
+                  </StyledTableRow>
+                ))
+              : "loading"}
           </TableBody>
         </Table>
       </TableContainer>
