@@ -1,0 +1,45 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "john@gmail.com",
+      "username": "johnd",
+      "password": "m38rmF$",
+      "name": "john",
+      "contact": "01048757",
+      "address": "cairo"
+    },
+    {
+      "id": 2,
+      "email": "morrison@gmail.com",
+      "username": "mor_2314",
+      "password": "83r5^_",
+      "name": "david",
+      "contact": "1048757344",
+      "address": "alex"
+    },
+    {
+      "id": 3,
+      "email": "kevin@gmail.com",
+      "username": "kevinryan",
+      "password": "kev02937@",
+      "name": "kevinbadr",
+      "contact": "01048757",
+      "address": "paris,france"
+    },
+    {
+      "name": "karim",
+      "email": "karim@mail.com",
+      "address": "cairo",
+      "contact": "01048789",
+      "id": 4
+    },
+    {
+      "name": "ahmed",
+      "email": "ahmed@mail.com",
+      "address": "alex",
+      "contact": "01017467365",
+      "id": 5
+    }
+  ]
+}
